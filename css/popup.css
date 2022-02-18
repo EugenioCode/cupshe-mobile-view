@@ -1,0 +1,9 @@
+#contain {
+    width: 120px;
+    height: 120px;
+}
+#contain img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}

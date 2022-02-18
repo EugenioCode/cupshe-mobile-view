@@ -1,0 +1,23 @@
+{
+  "name": "开发环境快速预览",
+  "version": "1.0",
+  "description": "开发环境快速预览",
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "tabs",
+    "https://*.cupshe.com/"
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  }
+}
