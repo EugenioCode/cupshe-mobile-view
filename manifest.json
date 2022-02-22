@@ -19,5 +19,13 @@
   },
   "page_action": {
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.cupshe.com/"],
+      "js": ["js/content-script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["js/inject.js"]
 }
