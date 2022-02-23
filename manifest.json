@@ -10,7 +10,8 @@
   },
   "permissions": [
     "tabs",
-    "https://*.cupshe.com/"
+    "https://*.cupshe.com/",
+    "storage"
   ],
   "background": {
     "scripts": [

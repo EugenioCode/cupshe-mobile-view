@@ -14,7 +14,13 @@ function injectCustomJS () {
 window.addEventListener("message", function(e)
 {
     if(e.data.cmd === 'shopifyMessage') {
-        chrome.runtime.sendMessage({themeId: e.data.data});
+        chrome.runtime.onMessage.addListener(function (request) {
+            console.log(request)
+
+            // chrome.storage.sync.set({theme: request.themeId}, function() {
+            //     console.log('保存成功！');
+            // });
+        });
     }
 
 }, false);
