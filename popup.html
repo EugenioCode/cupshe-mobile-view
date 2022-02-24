@@ -9,8 +9,26 @@
 
 <body>
 <div id="contain">
-    <img src="" alt="" id="qrcode">
-    <p id="reviewUrl"></p>
+    <div class="flex">
+        <p class="title">站点:</p>
+        <p class="desc" id="siteName"></p>
+    </div>
+    <div class="flex">
+        <p class="title">主题:</p>
+        <p class="desc" id="nameNode"></p>
+    </div>
+    <div class="flex">
+        <p class="title">主题ID:</p>
+        <p class="desc" id="idNode"></p>
+    </div>
+    <div class="flex qcCode">
+        <p class="title"></p>
+        <img src="" alt="扫描二维码即可访问开发主体" id="qrcode"/>
+    </div>
+    <div class="flex copyBox">
+        <input class="copyInput" id="linkNode" type="text" readonly value="">
+        <p class="copyBtn" id="copyBtn"><img src="images/copy.png" alt=""></p>
+    </div>
 </div>
 <script type="text/javascript" src="js/popup.js"></script>
 </body>
