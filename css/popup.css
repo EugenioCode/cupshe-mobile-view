@@ -30,13 +30,23 @@
     display: none;
 }
 #contain .copyBox .copyInput {
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8d8;
+    border-right-color: black;
     height: 32px;
     font-size: 12px;
     color: #333333;
     line-height: 17px;
     width: 100%;
-    padding: 0 6px;
+    padding: 0 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    outline: none;
+    -webkit-tap-highlight-color: #d8d8d8;
+    cursor: pointer;
+}
+#contain .copyBox .copyInput:focus{
+    border: 1px solid #d8d8d8d8;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -47,7 +57,7 @@
     align-items: center;
     height: 32px;
     width: 40px;
-    border: 1px solid #D8D8D8;
+    border: 1px solid black;
     background: black;
     margin-bottom: 0;
 }

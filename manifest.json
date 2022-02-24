@@ -10,7 +10,7 @@
   },
   "permissions": [
     "tabs",
-    "https://*.cupshe.com/",
+    "https://*.cupshe.com/*",
     "storage"
   ],
   "background": {
@@ -23,7 +23,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.cupshe.com/"],
+      "matches": ["https://*.cupshe.com/*"],
       "js": ["js/content-script.js"],
       "run_at": "document_start"
     }
