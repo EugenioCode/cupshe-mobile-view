@@ -16,7 +16,7 @@
 3. 加载已解压的拓展程序即可
 ![打开开发者模式](https://github.com/EugenioCode/picBed/blob/main/img.png?raw=true)
 4. 将插件固定到顶部即可使用插件
-![加载插件](https://github.com/EugenioCode/picBed/blob/main/iShot2022-02-25%2015.12.26.gif)
+![加载插件](https://github.com/EugenioCode/picBed/blob/main/iShot2022-02-25%2015.38.35.gif)
 
 ### 插件界面
 ![插件预览图](https://github.com/EugenioCode/picBed/blob/main/iShot2022-02-25%2015.20.53.png?raw=true)
