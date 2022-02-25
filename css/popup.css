@@ -60,6 +60,7 @@
     border: 1px solid black;
     background: black;
     margin-bottom: 0;
+    cursor: pointer;
 }
 #contain .copyBox .copyBtn img {
     width: 16px;

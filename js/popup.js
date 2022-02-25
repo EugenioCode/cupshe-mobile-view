@@ -28,6 +28,12 @@ chrome.tabs.getSelected(function (w) {
             input.select();
             if (document.execCommand("Copy")) {
                 document.execCommand("Copy")
+                chrome.notifications.create(null, {
+                    type: 'basic',
+                    iconUrl: 'images/success.png',
+                    title: '复制成功',
+                    message: '链接已复制到剪切板！'
+                });
             }
         }
     });

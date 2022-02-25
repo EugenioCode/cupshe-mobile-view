@@ -1,7 +1,7 @@
 {
-  "name": "开发环境快速预览",
+  "name": "Cupshe商城开发主体快速预览与分享",
   "version": "1.0",
-  "description": "开发环境快速预览",
+  "description": "不用登陆后台复制链接来访问开发主题，移动端扫描二维码PC端直接复制链接即可快速访问当前开发主题",
   "manifest_version": 2,
   "icons": {
     "16": "images/icon-16.png",
@@ -11,7 +11,8 @@
   "permissions": [
     "tabs",
     "https://*.cupshe.com/*",
-    "storage"
+    "storage",
+    "notifications"
   ],
   "background": {
     "scripts": [
