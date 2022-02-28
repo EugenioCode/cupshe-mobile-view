@@ -10,10 +10,12 @@ chrome.tabs.getSelected(function (w) {
     chrome.storage.sync.get(['theme'], function(res) {
         let themeName = res.theme.name;
         let themeId = res.theme.id;
-        let reviewUrl = `${url}?_ab=0&_fd=0&_sc=1&preview_theme_id=${themeId}`;
+        let linkURL = new URL(url).host + '/'
+        let reviewUrl = `${linkURL}?_ab=0&_fd=0&_sc=1&preview_theme_id=${themeId}`;
         linkNode.value = reviewUrl;
         nameNode.innerHTML = themeName;
         idNode.innerHTML = themeId;
+        console.log(new URL(url))
         siteNode.innerHTML = new URL(url).host;
         img.src = prefix + encodeURIComponent(reviewUrl);
         img.onload = function () {
@@ -22,13 +24,21 @@ chrome.tabs.getSelected(function (w) {
         }
 
         document.getElementById('copyBtn').onclick = function () {
-            let copyUrl = `${url}?_ab=0&_fd=0&_sc=1&preview_theme_id=${themeId}`;
             let input = document.getElementById("linkNode");
             input.setSelectionRange(0, 9999);
             input.select();
             if (document.execCommand("Copy")) {
                 document.execCommand("Copy")
             }
+        }
+
+        document.getElementById('refresh').onclick = function() {
+            chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+            {
+                chrome.tabs.sendMessage(tabs[0].id, {
+                    cmd: 'refreshStorage'
+                });
+            });
         }
     });
 })

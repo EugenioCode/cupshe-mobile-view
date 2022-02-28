@@ -13,7 +13,6 @@ function injectCustomJS() {
 // 接收inject的消息
 window.addEventListener("message", function (e) {
     if (e.data.cmd === 'shopifyMessage') {
-        console.log(e.data, 'hahahahah')
         chrome.storage.sync.clear();
         chrome.storage.sync.set({theme: e.data.data});
 
@@ -21,3 +20,10 @@ window.addEventListener("message", function (e) {
     }
 
 }, false);
+
+chrome.runtime.onMessage.addListener(function(request)
+{
+    if(request.cmd == 'refreshStorage') {
+        window.postMessage({cmd: 'refreshStorage'}, '*')
+    };
+});
