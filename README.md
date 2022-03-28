@@ -10,10 +10,9 @@
 > 内部使用的插件，没有发布到应用市场，需要手动安装
 
 1. 打开 `Chrome`浏览器，进入 [chrome插件配置页](chrome://extensions/)
-2. 将插件的 `.crx`文件解压
-   - `Window`用户将文件名修改为`.rar`,解压即可
-   - `Mac`用户将文件名修改为`.tar.gz`,解压即可
-3. 加载已解压的拓展程序即可
+2. 下载插件代码，记住下载位置
+   ![](https://raw.githubusercontent.com/EugenioCode/picBed/main/20220328170534.png)
+4. 加载已解压的拓展程序即可
 ![打开开发者模式](https://github.com/EugenioCode/picBed/blob/main/img.png?raw=true)
 4. 将插件固定到顶部即可使用插件
 
